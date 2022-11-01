@@ -1,5 +1,11 @@
 <script lang="ts" setup>
-onMounted(() => {});
+import { getBannerApi } from "~~/apis";
+
+onMounted(() => {
+  getBannerApi().then(res => {
+    console.log(res);
+  });
+});
 </script>
 
 <template>
